@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors',1);
+ob_start();
+flush(); // Flush the buffer
+ob_flush();
 
 
 //This script will handle login
@@ -64,10 +68,7 @@ if(empty($err))
 
 
 }
-ini_set('display_errors',1);
-ob_start();
-flush(); // Flush the buffer
-ob_flush();
+
 
 
 
