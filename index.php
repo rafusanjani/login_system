@@ -1,4 +1,6 @@
 <?php
+
+
 //This script will handle login
 session_start();
 
@@ -62,6 +64,13 @@ if(empty($err))
 
 
 }
+ini_set('display_errors',1);
+ob_start();
+flush(); // Flush the buffer
+ob_flush();
+
+
+
 
 
 ?>
