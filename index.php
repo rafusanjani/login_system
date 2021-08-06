@@ -6,7 +6,7 @@ ob_flush();
 
 
 //This script will handle login
-session_start();
+
 
 // check if the user is already logged in
 
