@@ -1,20 +1,20 @@
 <?php
-session_start();
-ini_set('display_errors',1);
-ob_start();
-flush(); // Flush the buffer
-ob_flush();
 
 
 //This script will handle login
 
 
 // check if the user is already logged in
-
+if(isset($_SESSION['username']))
+{
+    header("location: welcome.php");
+    exit;
+}
 require_once "config.php";
 
 $username = $password = "";
 $err = "";
+session_start();
 
 // if request method is post
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -65,7 +65,10 @@ if(empty($err))
 
 
 }
-
+ini_set('display_errors',1);
+ob_start();
+flush(); // Flush the buffer
+ob_flush();
 
 
 
